@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "4/dhQc64xc32spJkvgRJZIpkdIU5rETyPWNRtyLQ/155wtf3mi+xst1H4Y2P6vD6Q4um4gNY1eN9TBIRMvZVJw==",
+  "dgSpecHash": "ANpXeAESdgk1yGkyxPI3tYkjh/Up+Kn/2voEiOobDQbFsSLMOlnh9jImXCJ+I3EOB12rk+JypwnbXm6f8ntp4w==",
   "success": true,
   "projectFilePath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Drive\\Delivery.Hex.Drive.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\andrey\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
