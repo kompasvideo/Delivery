@@ -1,0 +1,12 @@
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/bin/Debug/net6.0/Delivery.Data.EF.deps.json
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/bin/Debug/net6.0/Delivery.Data.EF.dll
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/bin/Debug/net6.0/Delivery.Data.EF.pdb
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/Delivery.Data.EF.csproj.AssemblyReference.cache
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/Delivery.Data.EF.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/Delivery.Data.EF.AssemblyInfoInputs.cache
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/Delivery.Data.EF.AssemblyInfo.cs
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/Delivery.Data.EF.csproj.CoreCompileInputs.cache
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/Delivery.Data.EF.dll
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/refint/Delivery.Data.EF.dll
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/Delivery.Data.EF.pdb
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/ref/Delivery.Data.EF.dll

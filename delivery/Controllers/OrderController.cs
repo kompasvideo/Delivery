@@ -1,5 +1,4 @@
 ﻿using delivery.Controllers.Extension;
-using delivery.Models;
 using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
 using Microsoft.AspNetCore.Mvc;
@@ -10,19 +9,19 @@ namespace delivery.Controllers;
 public class OrderController : ControllerBase
 {
     private readonly ILogger<OrderController> _logger;
-    private readonly InputHandler<OrderInputRequest, bool> _Handler; 
+    private readonly InputHandler<AddOrderInputRequest, bool> _Handler; 
 
-    public OrderController(InputHandler<OrderInputRequest, bool> handler)
+    public OrderController(InputHandler<AddOrderInputRequest, bool> handler)
     {
         _Handler = handler;
     }
 
     [HttpPost]
     [Route("/api/order/new")]
-    public async Task<ActionResult> Add(OrderInputRequest order)
+    public async Task<ActionResult> Add(AddOrderInputRequest order)
     {
         var result = await _Handler.HandleInput(order);
-        return ControllerBaseExtender.ReturnActionResultInputHandlerResponse<object>(this, result);
+        return ControllerBaseExtender.ReturnActionResultInputHandlerResponse<bool>(this, result);
     }
 }
 

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DbContext\" />
+    <None Remove="Entity\" />
+    <None Remove="Entity\DeliveryOrder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DbContext\" />
+    <Folder Include="Entity\" />
+    <Folder Include="Entity\DeliveryOrder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
+  </ItemGroup>
+</Project>

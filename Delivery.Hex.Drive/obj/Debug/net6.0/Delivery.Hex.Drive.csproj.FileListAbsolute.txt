@@ -1,0 +1,15 @@
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/bin/Debug/net6.0/Delivery.Hex.Drive.deps.json
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/bin/Debug/net6.0/Delivery.Hex.Drive.dll
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/bin/Debug/net6.0/Delivery.Hex.Drive.pdb
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/bin/Debug/net6.0/Delivery.Hex.Domain.dll
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/bin/Debug/net6.0/Delivery.Hex.Domain.pdb
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/Delivery.Hex.Drive.csproj.AssemblyReference.cache
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/Delivery.Hex.Drive.GeneratedMSBuildEditorConfig.editorconfig
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/Delivery.Hex.Drive.AssemblyInfoInputs.cache
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/Delivery.Hex.Drive.AssemblyInfo.cs
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/Delivery.Hex.Drive.csproj.CoreCompileInputs.cache
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/Delivery.Hex.Drive.csproj.CopyComplete
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/Delivery.Hex.Drive.dll
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/refint/Delivery.Hex.Drive.dll
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/Delivery.Hex.Drive.pdb
+/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/ref/Delivery.Hex.Drive.dll

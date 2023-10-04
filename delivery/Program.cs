@@ -1,4 +1,6 @@
-﻿namespace delivery;
+﻿using delivery.Startup;
+
+namespace delivery;
 
 public class Program
 {
@@ -9,6 +11,8 @@ public class Program
         // Add services to the container.
 
         builder.Services.AddControllers();
+        builder.Services.RegisterDatabaseContext(builder.Configuration);
+        builder.Services.RegisterDeliveryServices(builder.Configuration);
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();

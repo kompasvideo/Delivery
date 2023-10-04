@@ -7,18 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="InputRequest\" />
+    <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="InputRequest\" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Delivery.Hex.Domain\Delivery.Hex.Domain.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\.editorconfig" />
   </ItemGroup>
 </Project>

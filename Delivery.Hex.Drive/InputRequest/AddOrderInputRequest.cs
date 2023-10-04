@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Delivery.Hex.Drive.InputRequest
 {
-	public class OrderInputRequest: InputRequest<bool>
+	public class AddOrderInputRequest: InputRequest<bool>
 	{
 		public string DeparturePoint { get; set; }
 		public string Destination { get; set; }
