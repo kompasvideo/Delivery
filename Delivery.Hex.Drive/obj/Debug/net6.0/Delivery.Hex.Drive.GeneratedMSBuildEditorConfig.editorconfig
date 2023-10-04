@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Delivery.Hex.Drive
-build_property.ProjectDir = C:\My\ТЗ\Delivery\Delivery.Hex.Drive\
+build_property.ProjectDir = /Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/
