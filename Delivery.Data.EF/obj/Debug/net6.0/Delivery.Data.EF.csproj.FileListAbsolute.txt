@@ -10,3 +10,15 @@
 /Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/refint/Delivery.Data.EF.dll
 /Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/Delivery.Data.EF.pdb
 /Users/andrejbarysnikov/Projects/Delivery/Delivery.Data.EF/obj/Debug/net6.0/ref/Delivery.Data.EF.dll
+C:\My\ТЗ\Delivery\Delivery.Data.EF\bin\Debug\net6.0\Delivery.Data.EF.deps.json
+C:\My\ТЗ\Delivery\Delivery.Data.EF\bin\Debug\net6.0\Delivery.Data.EF.dll
+C:\My\ТЗ\Delivery\Delivery.Data.EF\bin\Debug\net6.0\Delivery.Data.EF.pdb
+C:\My\ТЗ\Delivery\Delivery.Data.EF\obj\Debug\net6.0\Delivery.Data.EF.csproj.AssemblyReference.cache
+C:\My\ТЗ\Delivery\Delivery.Data.EF\obj\Debug\net6.0\Delivery.Data.EF.GeneratedMSBuildEditorConfig.editorconfig
+C:\My\ТЗ\Delivery\Delivery.Data.EF\obj\Debug\net6.0\Delivery.Data.EF.AssemblyInfoInputs.cache
+C:\My\ТЗ\Delivery\Delivery.Data.EF\obj\Debug\net6.0\Delivery.Data.EF.AssemblyInfo.cs
+C:\My\ТЗ\Delivery\Delivery.Data.EF\obj\Debug\net6.0\Delivery.Data.EF.csproj.CoreCompileInputs.cache
+C:\My\ТЗ\Delivery\Delivery.Data.EF\obj\Debug\net6.0\Delivery.Data.EF.dll
+C:\My\ТЗ\Delivery\Delivery.Data.EF\obj\Debug\net6.0\refint\Delivery.Data.EF.dll
+C:\My\ТЗ\Delivery\Delivery.Data.EF\obj\Debug\net6.0\Delivery.Data.EF.pdb
+C:\My\ТЗ\Delivery\Delivery.Data.EF\obj\Debug\net6.0\ref\Delivery.Data.EF.dll

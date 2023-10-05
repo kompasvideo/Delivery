@@ -18,7 +18,7 @@ namespace delivery.Startup
 		public static IServiceCollection RegisterDeliveryServices(this IServiceCollection services, IConfiguration configuration)
 		{
 
-			return services;
+            return services;
 		}
 
     }

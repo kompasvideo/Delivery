@@ -13,3 +13,10 @@
 /Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/refint/Delivery.Hex.Drive.dll
 /Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/Delivery.Hex.Drive.pdb
 /Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/Debug/net6.0/ref/Delivery.Hex.Drive.dll
+C:\My\ТЗ\Delivery\Delivery.Hex.Drive\obj\Debug\net6.0\Delivery.Hex.Drive.csproj.AssemblyReference.cache
+C:\My\ТЗ\Delivery\Delivery.Hex.Drive\obj\Debug\net6.0\Delivery.Hex.Drive.GeneratedMSBuildEditorConfig.editorconfig
+C:\My\ТЗ\Delivery\Delivery.Hex.Drive\obj\Debug\net6.0\Delivery.Hex.Drive.AssemblyInfoInputs.cache
+C:\My\ТЗ\Delivery\Delivery.Hex.Drive\obj\Debug\net6.0\Delivery.Hex.Drive.AssemblyInfo.cs
+C:\My\ТЗ\Delivery\Delivery.Hex.Drive\obj\Debug\net6.0\Delivery.Hex.Drive.csproj.CoreCompileInputs.cache
+C:\My\ТЗ\Delivery\Delivery.Hex.Drive\obj\Debug\net6.0\Delivery.Hex.Drive.dll
+C:\My\ТЗ\Delivery\Delivery.Hex.Drive\obj\Debug\net6.0\Delivery.Hex.Drive.pdb

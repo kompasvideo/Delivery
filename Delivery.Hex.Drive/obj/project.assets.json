@@ -71,32 +71,39 @@
     ]
   },
   "packageFolders": {
-    "/Users/andrejbarysnikov/.nuget/packages/": {}
+    "C:\\Users\\andrey\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/Delivery.Hex.Drive.csproj",
+      "projectUniqueName": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Drive\\Delivery.Hex.Drive.csproj",
       "projectName": "Delivery.Hex.Drive",
-      "projectPath": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/Delivery.Hex.Drive.csproj",
-      "packagesPath": "/Users/andrejbarysnikov/.nuget/packages/",
-      "outputPath": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/obj/",
+      "projectPath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Drive\\Delivery.Hex.Drive.csproj",
+      "packagesPath": "C:\\Users\\andrey\\.nuget\\packages\\",
+      "outputPath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Drive\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "/Users/andrejbarysnikov/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Domain/Delivery.Hex.Domain.csproj": {
-              "projectPath": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Domain/Delivery.Hex.Domain.csproj"
+            "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Domain\\Delivery.Hex.Domain.csproj": {
+              "projectPath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Domain\\Delivery.Hex.Domain.csproj"
             }
           }
         }
@@ -132,7 +139,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

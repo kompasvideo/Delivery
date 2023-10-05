@@ -1,33 +1,39 @@
 {
   "format": 1,
   "restore": {
-    "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Core/Delivery.Hex.Core.csproj": {}
+    "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Core\\Delivery.Hex.Core.csproj": {}
   },
   "projects": {
-    "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Core/Delivery.Hex.Core.csproj": {
+    "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Core\\Delivery.Hex.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Core/Delivery.Hex.Core.csproj",
+        "projectUniqueName": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Core\\Delivery.Hex.Core.csproj",
         "projectName": "Delivery.Hex.Core",
-        "projectPath": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Core/Delivery.Hex.Core.csproj",
-        "packagesPath": "/Users/andrejbarysnikov/.nuget/packages/",
-        "outputPath": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Core/obj/",
+        "projectPath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Core\\Delivery.Hex.Core.csproj",
+        "packagesPath": "C:\\Users\\andrey\\.nuget\\packages\\",
+        "outputPath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/andrejbarysnikov/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Domain/Delivery.Hex.Domain.csproj": {
-                "projectPath": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Domain/Delivery.Hex.Domain.csproj"
+              "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Domain\\Delivery.Hex.Domain.csproj": {
+                "projectPath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Domain\\Delivery.Hex.Domain.csproj"
               }
             }
           }
@@ -57,26 +63,32 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Domain/Delivery.Hex.Domain.csproj": {
+    "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Domain\\Delivery.Hex.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Domain/Delivery.Hex.Domain.csproj",
+        "projectUniqueName": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Domain\\Delivery.Hex.Domain.csproj",
         "projectName": "Delivery.Hex.Domain",
-        "projectPath": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Domain/Delivery.Hex.Domain.csproj",
-        "packagesPath": "/Users/andrejbarysnikov/.nuget/packages/",
-        "outputPath": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Domain/obj/",
+        "projectPath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Domain\\Delivery.Hex.Domain.csproj",
+        "packagesPath": "C:\\Users\\andrey\\.nuget\\packages\\",
+        "outputPath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/andrejbarysnikov/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\andrey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -110,7 +122,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.304/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

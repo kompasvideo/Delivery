@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "2udBQ4QILlJ8pQxP8yz27/71HUalCXGJnn0J62qOd6QhPGu36qp3VPZAlqHgQZQ6qsHaYvv6PGnbYOdYMDVdMA==",
+  "dgSpecHash": "ANpXeAESdgk1yGkyxPI3tYkjh/Up+Kn/2voEiOobDQbFsSLMOlnh9jImXCJ+I3EOB12rk+JypwnbXm6f8ntp4w==",
   "success": true,
-  "projectFilePath": "/Users/andrejbarysnikov/Projects/Delivery/Delivery.Hex.Drive/Delivery.Hex.Drive.csproj",
+  "projectFilePath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Drive\\Delivery.Hex.Drive.csproj",
   "expectedPackageFiles": [
-    "/Users/andrejbarysnikov/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+    "C:\\Users\\andrey\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],
   "logs": []
 }
