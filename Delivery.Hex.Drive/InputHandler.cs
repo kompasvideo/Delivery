@@ -1,6 +1,4 @@
-﻿using static System.Net.Mime.MediaTypeNames;
-
-namespace Delivery.Hex.Drive;
+﻿namespace Delivery.Hex.Drive;
 
 public abstract class InputHandler<TRequest, TResult> where TRequest : InputRequest<TResult>
 {
@@ -11,12 +9,12 @@ public abstract class InputHandler<TRequest, TResult> where TRequest : InputRequ
     public InputHandler()
     {
     }
-         /// <summary>
-         /// Этот метод реализовать в наследниках. Здесь вызываются сервисы и диспетчеры.
-         /// </summary>
-         /// <param name="request"></param>
-         /// <returns></returns>
-        protected abstract Task<TResult> HandleRequest(TRequest request);
+    /// <summary>
+    /// Этот метод реализовать в наследниках. Здесь вызываются сервисы и диспетчеры.
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    protected abstract Task<TResult> HandleRequest(TRequest request);
 
 
     public async Task<InputHandlerResponse<TResult>> HandleInput(TRequest request)

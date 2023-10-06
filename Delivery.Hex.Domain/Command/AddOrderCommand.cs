@@ -1,10 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Delivery.Data.EF.Entity.DeliveryOrder
+﻿namespace Delivery.Hex.Domain.Command
 {
-    public class Order
+    public class AddOrderCommand : ICommand<bool>
     {
-        [Key]
         public int OrderId { get; set; }
         /// <summary>
         /// дата
@@ -25,4 +22,3 @@ namespace Delivery.Data.EF.Entity.DeliveryOrder
         public bool NewOrder { get; set; }
     }
 }
-

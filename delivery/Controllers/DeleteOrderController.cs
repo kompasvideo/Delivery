@@ -1,6 +1,4 @@
 ﻿using delivery.Controllers.Extension;
-using Delivery.Data.EF;
-using Delivery.Data.EF.Entity.DeliveryOrder;
 using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +24,6 @@ public class DeleteOrderController : ControllerBase
             Id = id
         });
         return ControllerBaseExtender.ReturnActionResultInputHandlerResponse<bool>(this, result);
-    }   
+    }
 }
 

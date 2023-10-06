@@ -1,26 +1,18 @@
-﻿using Delivery.Data.EF;
-using Delivery.Data.EF.Entity.DeliveryOrder;
-using Delivery.Hex.Domain.Command;
+﻿using Delivery.Hex.Domain.Command;
+using Delivery.Hex.Domain.Data;
 using Delivery.Hex.Domain.Services;
 
 namespace Delivery.Hex.Core;
 public class DeleteOrderInputService : IDeleteOrderInputService
 {
-    private readonly DeliveryOrderDb context;
-    public DeleteOrderInputService(DeliveryOrderDb ctx)
+    private readonly ICommandHandler<DeleteOrderCommand, bool> _Handler;
+    public DeleteOrderInputService(ICommandHandler<DeleteOrderCommand, bool> handler)
     {
-        context = ctx;
+        _Handler = handler;
     }
     public async Task<bool> DeleteOrderAsync(DeleteOrderData data)
     {
-        int id = data.Id;
-        Order order = context.Orders.FirstOrDefault(p => p.OrderId == id);
-        if (order != null)
-        {
-            context.Orders.Remove(order);
-            context.SaveChanges();
-        }
-        return true;
-    }    
+        return await _Handler.ExecuteAsync(data);
+    }
 }
 

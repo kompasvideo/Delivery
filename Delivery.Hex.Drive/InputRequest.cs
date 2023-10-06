@@ -1,8 +1,7 @@
-﻿using System;
-namespace Delivery.Hex.Drive
+﻿namespace Delivery.Hex.Drive
 {
-	public interface InputRequest<TResult>
-	{
-	}
+    public interface InputRequest<TResult>
+    {
+    }
 }
 

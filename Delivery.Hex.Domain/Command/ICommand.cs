@@ -1,6 +1,5 @@
-﻿using System;
-namespace Delivery.Hex.Domain.Command
+﻿namespace Delivery.Hex.Domain.Command
 {
-	public interface ICommand<TResult> { }
+    public interface ICommand<TResult> { }
 }
 

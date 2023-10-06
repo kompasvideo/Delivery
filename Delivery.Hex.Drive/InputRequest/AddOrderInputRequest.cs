@@ -1,9 +1,8 @@
-﻿using Delivery.Hex.Domain.Command;
-using System;
+﻿using Delivery.Hex.Domain.Data;
 namespace Delivery.Hex.Drive.InputRequest
 {
-	public class AddOrderInputRequest: AddOrderData, InputRequest<bool>
-	{        
+    public class AddOrderInputRequest : AddOrderData, InputRequest<bool>
+    {
     }
 }
 

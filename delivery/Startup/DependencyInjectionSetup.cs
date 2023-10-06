@@ -1,6 +1,7 @@
-﻿using System;
-using Delivery.Data.EF;
+﻿using Delivery.Data.EF;
+using Delivery.Data.EF.CommandHandler;
 using Delivery.Hex.Core;
+using Delivery.Hex.Domain.Command;
 using Delivery.Hex.Domain.Services;
 using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
@@ -8,21 +9,21 @@ using Microsoft.EntityFrameworkCore;
 
 namespace delivery.Startup
 {
-	public static class DependencyInjectionSetup
-	{
-		public static IServiceCollection RegisterDatabaseContext(this IServiceCollection services, IConfiguration configuration)
-		{
+    public static class DependencyInjectionSetup
+    {
+        public static IServiceCollection RegisterDatabaseContext(this IServiceCollection services, IConfiguration configuration)
+        {
             services.AddDbContext<DeliveryOrderDb>(options =>
-				options.UseSqlServer(
-					configuration["Data:DeliveryOrder:ConnectionString"]));
+                options.UseSqlServer(
+                    configuration["Data:DeliveryOrder:ConnectionString"]));
 
             services.AddTransient<DeliveryOrderDb>();
 
-			return services;
-		}
+            return services;
+        }
 
-		public static IServiceCollection RegisterDeliveryServices(this IServiceCollection services, IConfiguration configuration)
-		{
+        public static IServiceCollection RegisterDeliveryServices(this IServiceCollection services, IConfiguration configuration)
+        {
             services.AddTransient<InputHandler<AddOrderInputRequest, bool>, AddOrderInputHandler>();
             services.AddTransient<InputHandler<GetAllOrderInputRequest, IEnumerable<object>>, GetAllOrderInputHandler>();
             services.AddTransient<InputHandler<SearchOrderInputRequest, IEnumerable<object>>, SearchOrderInputHandler>();
@@ -36,8 +37,12 @@ namespace delivery.Startup
             services.AddTransient<IGetOrderInputService, GetOrderInputService>();
             services.AddTransient<IEditOrderInputService, EditOrderInputService>();
             services.AddTransient<IDeleteOrderInputService, DeleteOrderInputService>();
+
+            services.AddTransient<ICommandHandler<AddOrderCommand, bool>, AddOrderCommandHandler>();
+            services.AddTransient<ICommandHandler<DeleteOrderCommand, bool>, DeleteOrderCommandHandler>();
+            services.AddTransient<ICommandHandler<EditOrderCommand, bool>, EditOrderCommandHandler>();
             return services;
-		}
+        }
 
     }
 }

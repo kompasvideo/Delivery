@@ -1,25 +1,18 @@
-﻿using Delivery.Data.EF;
-using Delivery.Data.EF.Entity.DeliveryOrder;
-using Delivery.Hex.Domain.Command;
+﻿using Delivery.Hex.Domain.Command;
+using Delivery.Hex.Domain.Data;
 using Delivery.Hex.Domain.Services;
 
 namespace Delivery.Hex.Core;
 public class EditOrderInputService : IEditOrderInputService
 {
-    private readonly DeliveryOrderDb context;
-    public EditOrderInputService(DeliveryOrderDb ctx)
+    private readonly ICommandHandler<EditOrderCommand, bool> _Handler;
+    public EditOrderInputService(ICommandHandler<EditOrderCommand, bool> handler)
     {
-        context = ctx;
+        _Handler = handler;
     }
     public async Task<bool> EditOrderAsync(EditOrderData data)
     {
-        Order orderEdit = context.Orders.FirstOrDefault(o => o.OrderId == data.OrderId);
-        orderEdit.Date = data.Date;
-        orderEdit.Shipper = data.Shipper;
-        orderEdit.Consignee = data.Consignee;
-        orderEdit.Cargo = data.Cargo;
-        context.SaveChanges();
-        return true;
-    }    
+        return await _Handler.ExecuteAsync(data);
+    }
 }
 
