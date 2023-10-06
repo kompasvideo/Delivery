@@ -10,9 +10,7 @@
     <None Remove="Services\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-  <ItemGroup>
+    <ProjectReference Include="..\Delivery.Data.EF\Delivery.Data.EF.csproj" />
     <ProjectReference Include="..\Delivery.Hex.Domain\Delivery.Hex.Domain.csproj" />
   </ItemGroup>
 </Project>

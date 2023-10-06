@@ -2,7 +2,7 @@
 using System;
 namespace Delivery.Hex.Drive.InputRequest
 {
-	public class AddOrderInputRequest: AddOrderData, InputRequest<bool>
+	public class EditOrderInputRequest: EditOrderData, InputRequest<bool>
 	{        
     }
 }

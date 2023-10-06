@@ -10,9 +10,6 @@
     <None Remove="InputRequest\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="InputRequest\" />
-  </ItemGroup>
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>

@@ -3,9 +3,9 @@ using Delivery.Hex.Domain.Command;
 
 namespace Delivery.Hex.Domain.Services
 {
-	public interface IAddOrderInputService
+	public interface IDeleteOrderInputService
 	{
-		Task<bool> AddOrderAsync(AddOrderData data);
+		Task<bool> DeleteOrderAsync(DeleteOrderData data);
 	}
 }
 
