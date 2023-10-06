@@ -14,7 +14,8 @@ namespace Delivery.Hex.Drive.InputRequest
 
         protected override async Task<bool> HandleRequest(AddOrderInputRequest request)
         {
-            return await _Service.AddOrderAsync(request);
+            //return await _Service.AddOrderAsync(request);
+            return await _Service.AddOrderAsync();
         }
     }
 }

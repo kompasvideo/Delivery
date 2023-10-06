@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DeliveryClientMVC.Models
 {
-    //[Table("Order", Schema = "order")]
     public class Order
     {
         [Key]
@@ -25,6 +24,5 @@ namespace DeliveryClientMVC.Models
         /// </summary>
         public string? Cargo { get; set; }
         public bool NewOrder { get; set; }
-        //public Courier Courier { get; set; }
     }
 }

@@ -1,4 +1,5 @@
-﻿using delivery.Startup;
+﻿using delivery.Models;
+using delivery.Startup;
 
 namespace delivery;
 
@@ -28,7 +29,7 @@ public class Program
 
         app.UseAuthorization();
 
-
+        SeedData.EnsurePopulated(app);
         app.MapControllers();
 
         app.Run();

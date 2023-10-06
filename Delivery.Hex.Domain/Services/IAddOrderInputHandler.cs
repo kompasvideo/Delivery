@@ -5,7 +5,8 @@ namespace Delivery.Hex.Domain.Services
 {
 	public interface IAddOrderInputHandler
 	{
-		Task<bool> AddOrderAsync(PostOrderData data);
+		//Task<bool> AddOrderAsync(AddOrderInputRequest data);
+		Task<bool> AddOrderAsync();
 	}
 }
 

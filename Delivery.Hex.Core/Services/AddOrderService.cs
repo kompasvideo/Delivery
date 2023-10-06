@@ -8,5 +8,10 @@ public class AddOrderService : IAddOrderInputHandler
     {
         throw new NotImplementedException();
     }
+
+    public Task<bool> AddOrderAsync()
+    {
+        throw new NotImplementedException();
+    }
 }
 

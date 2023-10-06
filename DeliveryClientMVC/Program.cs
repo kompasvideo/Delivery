@@ -12,7 +12,6 @@ namespace DeliveryClientMVC
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            //builder.Services.AddDbContext<DeliveryOrderDb>(opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("DeliveryOrder")));
             builder.Services.AddDbContext<DeliveryOrderDb>(options =>
                options.UseSqlServer(
                    builder.Configuration["Data:DeliveryOrder:ConnectionString"]));

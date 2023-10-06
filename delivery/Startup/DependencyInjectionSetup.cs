@@ -8,9 +8,11 @@ namespace delivery.Startup
 	{
 		public static IServiceCollection RegisterDatabaseContext(this IServiceCollection services, IConfiguration configuration)
 		{
-			services.AddDbContext<DeliveryOrderDb>(opt => opt.UseNpgsql(configuration.GetConnectionString("DeliveryOrder")));
+            services.AddDbContext<DeliveryOrderDb>(options =>
+				options.UseSqlServer(
+					configuration["Data:DeliveryOrder:ConnectionString"]));
 
-			services.AddTransient<DeliveryOrderDb>();
+            services.AddTransient<DeliveryOrderDb>();
 
 			return services;
 		}

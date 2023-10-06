@@ -45,24 +45,7 @@ namespace DeliveryClientMVC.Models
                         Date = "04.01.2023"
                     });
                     context.SaveChanges();
-                }
-                //if (!context.Courier.Any())
-                //{
-                //    context.Courier.AddRange(
-                //    new Courier
-                //    {
-                //        Name = "Курьер_1"
-                //    },
-                //    new Courier
-                //    {
-                //        Name = "Курьер_2"
-                //    },
-                //    new Courier
-                //    {
-                //        Name = "Курьер_3"
-                //    }
-                //    );
-                //}
+                }                
             }
         }
     }
