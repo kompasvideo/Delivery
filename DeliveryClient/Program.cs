@@ -1,5 +1,6 @@
 using DeliveryClient.Data;
 using DeliveryClient.Interfaces;
+using DeliveryClient.Mappers;
 
 namespace DeliveryClient
 {
@@ -12,6 +13,7 @@ namespace DeliveryClient
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddTransient<IOrder, OrderAPI>();
+            builder.Services.AddTransient<IOrderMapper, OrderMapper>();
 
             var app = builder.Build();
 

@@ -9,19 +9,21 @@ namespace Delivery.Data.EF.CommandHandler
 
         public async Task<bool> ExecuteAsync(AddOrderCommand command)
         {
+            context.Couriers.ToList();
+            context.Clients.ToList();
             Order order = new Order()
             {
                 OrderId = command.OrderId,
                 Date = command.Date,
-                Shipper = command.Shipper,
-                Consignee = command.Consignee,
+                Shipper = GetClientToName(command.Shipper),
+                Consignee = GetClientToName(command.Consignee),
                 Cargo = command.Cargo,
-                NewOrder = command.NewOrder,
+                StatusOrder = StatusOrder.NEW,
             };
 
             if (order.OrderId == 0)
             {
-                order.NewOrder = true;
+                order.StatusOrder = StatusOrder.NEW;
                 context.Orders.Add(order);
             }
             else
@@ -33,7 +35,7 @@ namespace Delivery.Data.EF.CommandHandler
                     dbEntry.Cargo = order.Cargo;
                     dbEntry.Consignee = order.Consignee;
                     dbEntry.Date = order.Date;
-                    dbEntry.NewOrder = true;
+                    dbEntry.StatusOrder = StatusOrder.NEW;
                 }
             }
             context.SaveChanges();
@@ -42,6 +44,10 @@ namespace Delivery.Data.EF.CommandHandler
         public AddOrderCommandHandler(DeliveryOrderDb ctx)
         {
             context = ctx;
+        }
+        public Client GetClientToName(string name)
+        {
+            return context.Clients.FirstOrDefault(o => o.Name == name);
         }
     }
 }

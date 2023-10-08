@@ -33,6 +33,7 @@ namespace DeliveryServer.Startup
             services.AddTransient<InputHandler<GetOrderInputRequest, object>, GetOrderInputHandler>();
             services.AddTransient<InputHandler<EditOrderInputRequest, bool>, EditOrderInputHandler>();
             services.AddTransient<InputHandler<DeleteOrderInputRequest, bool>, DeleteOrderInputHandler>();
+            services.AddTransient<InputHandler<GetAllClientsInputRequest, IEnumerable<object>>, GetAllClientsInputHandler>();
 
             services.AddTransient<IAddOrderInputService, AddOrderInputService>();
             services.AddTransient<IGetAllOrderInputService, GetAllOrderInputService>();
@@ -40,6 +41,7 @@ namespace DeliveryServer.Startup
             services.AddTransient<IGetOrderInputService, GetOrderInputService>();
             services.AddTransient<IEditOrderInputService, EditOrderInputService>();
             services.AddTransient<IDeleteOrderInputService, DeleteOrderInputService>();
+            services.AddTransient<IGetAllClientsInputService, GetAllClientsInputService>();
 
             services.AddTransient<ICommandHandler<AddOrderCommand, bool>, AddOrderCommandHandler>();
             services.AddTransient<ICommandHandler<DeleteOrderCommand, bool>, DeleteOrderCommandHandler>();
@@ -47,6 +49,7 @@ namespace DeliveryServer.Startup
             services.AddTransient<IQueryHandler<GetAllQuery, GetAllQueryModel>, GetAllQueryHandler>();
             services.AddTransient<IQueryHandler<GetOrderQuery, GetOrderQueryModel>, GetOrderQueryHandler>();
             services.AddTransient<IQueryHandler<SearchOrderQuery, SearchOrderQueryModel>, SearchOrderQueryHandler>();
+            services.AddTransient<IQueryHandler<GetAllClientsQuery, GetAllClientsQueryModel>, GetAllClientsQueryHandler>();
             return services;
         }
 

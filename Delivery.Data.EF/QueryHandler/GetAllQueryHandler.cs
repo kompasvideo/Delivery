@@ -9,6 +9,8 @@ namespace Delivery.Data.EF.QueryHandler
         private readonly DeliveryOrderDb _Context;
         public async Task<GetAllQueryModel> ExecuteAsync(GetAllQuery query)
         {
+            _Context.Couriers.ToList();
+            _Context.Clients.ToList();
             IEnumerable<Order> orders = _Context.Orders;
             return new GetAllQueryModel()
             {

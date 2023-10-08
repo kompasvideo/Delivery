@@ -11,5 +11,7 @@ namespace DeliveryClient.Interfaces
         IEnumerable<Order> SearchOrder(string text);
         Order GetOrderById(int id);
         Task EditOrder(Order order);
+        IEnumerable<Client> GetClients();
+        Client GetClientToName(string name);
     }
 }

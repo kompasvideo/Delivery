@@ -9,6 +9,8 @@ namespace Delivery.Data.EF.QueryHandler
         private readonly DeliveryOrderDb _Context;
         public async Task<GetOrderQueryModel> ExecuteAsync(GetOrderQuery query)
         {
+            _Context.Couriers.ToList();
+            _Context.Clients.ToList();
             int id = query.Id;
             Order order = _Context.Orders.FirstOrDefault(o => o.OrderId == id);
             return new GetOrderQueryModel()

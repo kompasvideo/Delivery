@@ -1,6 +1,7 @@
 ﻿using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 
 namespace DeliveryServer.Controllers
 {
@@ -15,13 +16,14 @@ namespace DeliveryServer.Controllers
 
         [HttpGet]
         [Route("/api/order/search")]
-        public IEnumerable<object> Search(string text)
+        public string Search(string text)
         {
             var result = _Handler.HandleInput(new SearchOrderInputRequest() 
             { 
                 Text = text
             });
-            return result.Result.Response;
+            string str = JsonConvert.SerializeObject(result.Result.Response);
+            return str;
         }
     }
 }
