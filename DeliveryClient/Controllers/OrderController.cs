@@ -21,7 +21,7 @@ namespace DeliveryClient.Controllers
 
         public IActionResult Add()
         {
-            return View();
+            return View(_orderRepository.GetClients());
         }
 
         [HttpPost]
@@ -29,8 +29,8 @@ namespace DeliveryClient.Controllers
         {
             Order order = new Order();
             order.Date = date;
-            order.Shipper = shipper;
-            order.Consignee = consignee;
+            order.Shipper = _orderRepository.GetClientToName(shipper);
+            order.Consignee = _orderRepository.GetClientToName(consignee);
             order.Cargo = cargo;
             _orderRepository.SaveOrder(order);
             return RedirectToAction("Index");
@@ -68,7 +68,12 @@ namespace DeliveryClient.Controllers
         [HttpPost]
         public IActionResult ViewEditOrder(int id)
         {
-            return View(_orderRepository.GetOrderById(id));
+            ViewEdit viewEdit = new ViewEdit()
+            {
+                Order = _orderRepository.GetOrderById(id),
+                Clients = _orderRepository.GetClients()
+            };
+            return View(viewEdit);
         }
 
         [HttpPost]
@@ -78,8 +83,8 @@ namespace DeliveryClient.Controllers
             {
                 OrderId = id,
                 Date = date,
-                Shipper = shipper,
-                Consignee = consignee,
+                Shipper = _orderRepository.GetClientToName(shipper),
+                Consignee = _orderRepository.GetClientToName(consignee),
                 Cargo = cargo
             };
             _orderRepository.EditOrder(order);

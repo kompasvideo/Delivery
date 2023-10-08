@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oW2vv7kbuycSo6RkN1ckH6mo3Fdrb+W7XSornoqa2WPggTTkGx0KJZoZdcji/0x8EmAI+fap9w17J5JRgy2vwQ==",
+  "dgSpecHash": "m6ZcDfcnC6n1gCYGUM61+qKvlLmdIoIKuiqViGGVq6qkdSLyUBILGFvSV6HgBain8kuftUk5/XNQdwjEj1NPag==",
   "success": true,
   "projectFilePath": "C:\\My\\ТЗ\\Delivery\\Delivery.Data.EF\\Delivery.Data.EF.csproj",
   "expectedPackageFiles": [
@@ -15,6 +15,7 @@
     "C:\\Users\\andrey\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\andrey\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
     "C:\\Users\\andrey\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\andrey\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\andrey\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []

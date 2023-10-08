@@ -13,11 +13,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DbContext\" />
-    <Folder Include="Entity\" />
-    <Folder Include="Entity\DeliveryOrder\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.11" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Delivery.Hex.Domain\Delivery.Hex.Domain.csproj" />

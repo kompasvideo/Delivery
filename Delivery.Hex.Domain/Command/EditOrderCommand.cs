@@ -10,15 +10,17 @@
         /// <summary>
         /// грузоотправитель
         /// </summary>
-        public string? Shipper { get; set; }
+        public string Shipper { get; set; }
         /// <summary>
         /// грузополучатель
         /// </summary>
-        public string? Consignee { get; set; }
+        public string Consignee { get; set; }
         /// <summary>
         /// груз
         /// </summary>
         public string? Cargo { get; set; }
-        public bool NewOrder { get; set; }
+        //public StatusOrder StatusOrder { get; set; }
+        public int? CourierInfoKey { get; set; }
+        //public Courier Courier { get; set; }
     }
 }
