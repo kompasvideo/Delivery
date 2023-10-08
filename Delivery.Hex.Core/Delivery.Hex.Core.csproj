@@ -13,4 +13,8 @@
     <ProjectReference Include="..\Delivery.Data.EF\Delivery.Data.EF.csproj" />
     <ProjectReference Include="..\Delivery.Hex.Domain\Delivery.Hex.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CommandHandler\" />
+    <Folder Include="QueryHandler\" />
+  </ItemGroup>
 </Project>

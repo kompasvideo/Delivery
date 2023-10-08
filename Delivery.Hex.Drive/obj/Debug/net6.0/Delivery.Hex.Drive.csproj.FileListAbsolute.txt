@@ -28,5 +28,3 @@ C:\My\ТЗ\Delivery\Delivery.Hex.Drive\bin\Debug\net6.0\Delivery.Hex.Domain.pdb
 C:\My\ТЗ\Delivery\Delivery.Hex.Drive\obj\Debug\net6.0\Delivery.Hex.Drive.csproj.CopyComplete
 C:\My\ТЗ\Delivery\Delivery.Hex.Drive\obj\Debug\net6.0\refint\Delivery.Hex.Drive.dll
 C:\My\ТЗ\Delivery\Delivery.Hex.Drive\obj\Debug\net6.0\ref\Delivery.Hex.Drive.dll
-C:\My\ТЗ\Delivery\Delivery.Hex.Drive\bin\Debug\net6.0\Delivery.Data.EF.dll
-C:\My\ТЗ\Delivery\Delivery.Hex.Drive\bin\Debug\net6.0\Delivery.Data.EF.pdb

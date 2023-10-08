@@ -10,8 +10,4 @@
     <None Remove="Services\" />
     <None Remove="Command\" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Delivery.Data.EF\Delivery.Data.EF.csproj" />
-  </ItemGroup>
 </Project>

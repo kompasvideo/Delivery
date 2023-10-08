@@ -31,7 +31,11 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Domain\\Delivery.Hex.Domain.csproj": {
+                "projectPath": "C:\\My\\ТЗ\\Delivery\\Delivery.Hex.Domain\\Delivery.Hex.Domain.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -162,11 +166,7 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\My\\ТЗ\\Delivery\\Delivery.Data.EF\\Delivery.Data.EF.csproj": {
-                "projectPath": "C:\\My\\ТЗ\\Delivery\\Delivery.Data.EF\\Delivery.Data.EF.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

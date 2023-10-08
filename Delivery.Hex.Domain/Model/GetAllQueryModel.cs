@@ -1,9 +1,7 @@
-﻿using Delivery.Data.EF.Entity.DeliveryOrder;
-
-namespace Delivery.Hex.Domain.Model
+﻿namespace Delivery.Hex.Domain.Model
 {
     public class GetAllQueryModel
     {
-        public IEnumerable<Order> Orders { get; set; }
+        public IEnumerable<object> Orders { get; set; }
     }
 }
