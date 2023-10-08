@@ -39,7 +39,8 @@ namespace DeliveryClient.Data
             HttpRequestMessage request = new HttpRequestMessage();
             request.RequestUri = new Uri(host + "/api/order/edit");
             request.Method = HttpMethod.Post;
-            request.Content = new StringContent(JsonConvert.SerializeObject(order), Encoding.UTF8, mediaType: "application/json");
+            string content = JsonConvert.SerializeObject(_OrderMapper.ToOrderDto(order));
+            request.Content = new StringContent(content, Encoding.UTF8, mediaType: "application/json");
             await httpClient.SendAsync(request);
         }
 
@@ -57,8 +58,7 @@ namespace DeliveryClient.Data
             request.RequestUri = new Uri(host + "/api/order/add");
             request.Method = HttpMethod.Post;
             string content = JsonConvert.SerializeObject(_OrderMapper.ToOrderDto(order));
-            request.Content = new StringContent(content, 
-                Encoding.UTF8, mediaType: "application/json");
+            request.Content = new StringContent(content, Encoding.UTF8, mediaType: "application/json");
             await httpClient.SendAsync(request);
         }
 
