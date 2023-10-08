@@ -1,9 +1,8 @@
-﻿using Delivery.Data.EF;
-using Delivery.Data.EF.Entity.DeliveryOrder;
+﻿using Delivery.Data.EF.Entity.DeliveryOrder;
 using Delivery.Hex.Domain.Model;
 using Delivery.Hex.Domain.Query;
 
-namespace Delivery.Hex.Core.QueryHandler
+namespace Delivery.Data.EF.QueryHandler
 {
     public class SearchOrderQueryHandler : IQueryHandler<SearchOrderQuery, SearchOrderQueryModel>
     {

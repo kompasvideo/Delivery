@@ -1,7 +1,7 @@
-﻿using delivery.Models;
-using delivery.Startup;
+﻿using DeliveryServer.Models;
+using DeliveryServer.Startup;
 
-namespace delivery;
+namespace DeliveryServer;
 
 public class Program
 {

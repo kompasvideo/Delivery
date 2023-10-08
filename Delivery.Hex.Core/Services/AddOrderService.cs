@@ -1,5 +1,5 @@
 ﻿using Delivery.Hex.Domain.Command;
-using Delivery.Hex.Domain.Data;
+using Delivery.Hex.Domain.Entity;
 using Delivery.Hex.Domain.Services;
 
 namespace Delivery.Hex.Core;

@@ -1,11 +1,9 @@
-﻿using delivery.Controllers.Extension;
-using Delivery.Data.EF;
-using Delivery.Data.EF.Entity.DeliveryOrder;
+﻿using DeliveryServer.Controllers.Extension;
 using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
 using Microsoft.AspNetCore.Mvc;
 
-namespace delivery.Controllers;
+namespace DeliveryServer.Controllers;
 
 [ApiController]
 public class AddOrderController : ControllerBase
@@ -23,6 +21,6 @@ public class AddOrderController : ControllerBase
     {
         var result = await _Handler.HandleInput(order);
         return ControllerBaseExtender.ReturnActionResultInputHandlerResponse<bool>(this, result);
-    }   
+    }
 }
 

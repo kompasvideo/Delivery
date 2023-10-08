@@ -2,7 +2,7 @@
 using Delivery.Data.EF.Entity.DeliveryOrder;
 using Microsoft.EntityFrameworkCore;
 
-namespace delivery.Models
+namespace DeliveryServer.Models
 {
     public class SeedData
     {

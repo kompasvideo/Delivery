@@ -1,4 +1,4 @@
-﻿using Delivery.Hex.Domain.Data;
+﻿using Delivery.Hex.Domain.Entity;
 using Delivery.Hex.Domain.Model;
 using Delivery.Hex.Domain.Query;
 using Delivery.Hex.Domain.Services;

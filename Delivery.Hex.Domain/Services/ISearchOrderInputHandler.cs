@@ -1,4 +1,4 @@
-﻿using Delivery.Hex.Domain.Data;
+﻿using Delivery.Hex.Domain.Entity;
 
 namespace Delivery.Hex.Domain.Services
 {

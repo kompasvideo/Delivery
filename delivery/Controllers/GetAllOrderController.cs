@@ -2,8 +2,9 @@
 using Delivery.Hex.Drive.InputRequest;
 using Microsoft.AspNetCore.Mvc;
 
-namespace delivery.Controllers
+namespace DeliveryServer.Controllers
 {
+    [ApiController]
     public class GetAllOrderController : ControllerBase
     {
         private readonly InputHandler<GetAllOrderInputRequest, IEnumerable<object>> _Handler;

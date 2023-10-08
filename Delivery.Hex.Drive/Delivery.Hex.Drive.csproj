@@ -15,7 +15,4 @@
   <ItemGroup>
     <ProjectReference Include="..\Delivery.Hex.Domain\Delivery.Hex.Domain.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="..\.editorconfig" />
-  </ItemGroup>
 </Project>

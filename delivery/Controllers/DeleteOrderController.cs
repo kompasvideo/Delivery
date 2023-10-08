@@ -1,9 +1,9 @@
-﻿using delivery.Controllers.Extension;
+﻿using DeliveryServer.Controllers.Extension;
 using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
 using Microsoft.AspNetCore.Mvc;
 
-namespace delivery.Controllers;
+namespace DeliveryServer.Controllers;
 
 [ApiController]
 public class DeleteOrderController : ControllerBase

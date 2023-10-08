@@ -1,9 +1,8 @@
-﻿using Delivery.Data.EF;
-using Delivery.Data.EF.Entity.DeliveryOrder;
+﻿using Delivery.Data.EF.Entity.DeliveryOrder;
 using Delivery.Hex.Domain.Model;
 using Delivery.Hex.Domain.Query;
 
-namespace Delivery.Hex.Core.QueryHandler
+namespace Delivery.Data.EF.QueryHandler
 {
     public class GetAllQueryHandler : IQueryHandler<GetAllQuery, GetAllQueryModel>
     {
@@ -12,7 +11,7 @@ namespace Delivery.Hex.Core.QueryHandler
         {
             IEnumerable<Order> orders = _Context.Orders;
             return new GetAllQueryModel()
-            { 
+            {
                 Orders = orders
             };
         }

@@ -1,7 +1,7 @@
 ﻿using Delivery.Hex.Drive;
 using Microsoft.AspNetCore.Mvc;
 
-namespace delivery.Controllers.Extension
+namespace DeliveryServer.Controllers.Extension
 {
     public static class ControllerBaseExtender
     {

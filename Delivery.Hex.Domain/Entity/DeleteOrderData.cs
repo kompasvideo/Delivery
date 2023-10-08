@@ -1,6 +1,6 @@
 ﻿using Delivery.Hex.Domain.Command;
 
-namespace Delivery.Hex.Domain.Data
+namespace Delivery.Hex.Domain.Entity
 {
     public class DeleteOrderData : DeleteOrderCommand
     {

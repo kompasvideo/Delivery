@@ -1,7 +1,7 @@
 ﻿using Delivery.Data.EF;
 using Delivery.Data.EF.CommandHandler;
+using Delivery.Data.EF.QueryHandler;
 using Delivery.Hex.Core;
-using Delivery.Hex.Core.QueryHandler;
 using Delivery.Hex.Domain.Command;
 using Delivery.Hex.Domain.Model;
 using Delivery.Hex.Domain.Query;
@@ -10,7 +10,7 @@ using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
 using Microsoft.EntityFrameworkCore;
 
-namespace delivery.Startup
+namespace DeliveryServer.Startup
 {
     public static class DependencyInjectionSetup
     {
