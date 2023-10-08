@@ -1,21 +1,21 @@
-﻿using Delivery.Data.EF;
-using Delivery.Data.EF.Entity.DeliveryOrder;
-using Delivery.Hex.Domain.Data;
+﻿using Delivery.Hex.Domain.Data;
+using Delivery.Hex.Domain.Model;
+using Delivery.Hex.Domain.Query;
 using Delivery.Hex.Domain.Services;
 
 namespace Delivery.Hex.Core;
 public class GetOrderInputService : IGetOrderInputService
 {
-    private readonly DeliveryOrderDb context;
-    public GetOrderInputService(DeliveryOrderDb ctx)
+    private readonly IQueryHandler<GetOrderQuery, GetOrderQueryModel?> _Query;
+    public GetOrderInputService(IQueryHandler<GetOrderQuery, GetOrderQueryModel?> query)
     {
-        context = ctx;
+        _Query = query;
     }
+
     public async Task<object> GetOrderAsync(GetOrderData data)
     {
-        int id = data.Id;
-        Order order = context.Orders.FirstOrDefault(o => o.OrderId == id);
-        return order;
+        var model = await _Query.ExecuteAsync(new GetOrderQuery() { Id = data.Id });
+        return model.Order;
     }
 }
 

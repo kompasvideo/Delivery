@@ -1,7 +1,10 @@
 ﻿using Delivery.Data.EF;
 using Delivery.Data.EF.CommandHandler;
 using Delivery.Hex.Core;
+using Delivery.Hex.Core.QueryHandler;
 using Delivery.Hex.Domain.Command;
+using Delivery.Hex.Domain.Model;
+using Delivery.Hex.Domain.Query;
 using Delivery.Hex.Domain.Services;
 using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
@@ -41,6 +44,9 @@ namespace delivery.Startup
             services.AddTransient<ICommandHandler<AddOrderCommand, bool>, AddOrderCommandHandler>();
             services.AddTransient<ICommandHandler<DeleteOrderCommand, bool>, DeleteOrderCommandHandler>();
             services.AddTransient<ICommandHandler<EditOrderCommand, bool>, EditOrderCommandHandler>();
+            services.AddTransient<IQueryHandler<GetAllQuery, GetAllQueryModel>, GetAllQueryHandler>();
+            services.AddTransient<IQueryHandler<GetOrderQuery, GetOrderQueryModel>, GetOrderQueryHandler>();
+            services.AddTransient<IQueryHandler<SearchOrderQuery, SearchOrderQueryModel>, SearchOrderQueryHandler>();
             return services;
         }
 

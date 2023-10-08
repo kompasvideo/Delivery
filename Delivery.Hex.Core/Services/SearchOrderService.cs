@@ -1,26 +1,20 @@
-﻿using Delivery.Data.EF;
-using Delivery.Data.EF.Entity.DeliveryOrder;
-using Delivery.Hex.Domain.Data;
+﻿using Delivery.Hex.Domain.Data;
+using Delivery.Hex.Domain.Model;
+using Delivery.Hex.Domain.Query;
 using Delivery.Hex.Domain.Services;
 
 namespace Delivery.Hex.Core;
 public class SearchOrderInputService : ISearchOrderInputService
 {
-    private readonly DeliveryOrderDb context;
-    public SearchOrderInputService(DeliveryOrderDb ctx)
+    private readonly IQueryHandler<SearchOrderQuery, SearchOrderQueryModel?> _Query;
+    public SearchOrderInputService(IQueryHandler<SearchOrderQuery, SearchOrderQueryModel?> query)
     {
-        context = ctx;
+        _Query = query;
     }
     public async Task<IEnumerable<object>> SearchOrderAsync(SearchOrderData data)
     {
-        string text = data.Text;
-        List<Order> orders = context.Orders.ToList();
-        IEnumerable<Order> res = from order in orders
-                                 where order.Shipper.ToLower().Contains(text.ToLower())
-                                    || order.Consignee.ToLower().Contains(text.ToLower())
-                                    || order.Cargo.ToLower().Contains(text.ToLower())
-                                 select order;
-        return res;
+        var model = await _Query.ExecuteAsync(new SearchOrderQuery() { Text = data.Text });
+        return model.Orders;
     }
 }
 
