@@ -1,5 +1,6 @@
 ﻿using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
+using DeliveryServer.Controllers.Extension;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -23,16 +24,17 @@ namespace DeliveryServer.Controllers
         /// <remarks>Изменить статус заявки на "Выполнено" 
         /// </remarks>
         /// <response code="200"></response>
-        [HttpGet]
+        [HttpPost]
         [Route("/api/order/order_done/{id}")]
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public void Get(int id)
+        public async Task<ActionResult> OrderDone(int id)
         {
-            _ = _Handler.HandleInput(new OrderDoneInputRequest()
+            var result = await _Handler.HandleInput(new OrderDoneInputRequest()
             {
                 Id = id,
             });
+            return ControllerBaseExtender.ReturnActionResultInputHandlerResponse<bool>(this, result);
         }
     }
 }

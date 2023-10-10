@@ -1,5 +1,6 @@
 ﻿using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
+using DeliveryServer.Controllers.Extension;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DeliveryServer.Controllers
@@ -22,17 +23,18 @@ namespace DeliveryServer.Controllers
         /// <remarks>Изменить статус заявки на "Отменено" 
         /// </remarks>
         /// <response code="200"></response>
-        [HttpGet]
+        [HttpPost]
         [Route("/api/order/order_canceled_save/{id}")]
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public void Get(int id, string comments)
+        public async Task<ActionResult> OrderCanceledSave(int id, string comments)
         {
-            _ = _Handler.HandleInput(new OrderCanceledSaveInputRequest()
+            var result = await _Handler.HandleInput(new OrderCanceledSaveInputRequest()
             {
                 Id = id,
                 Comments = comments,
             });
+            return ControllerBaseExtender.ReturnActionResultInputHandlerResponse<bool>(this, result);
         }
     }
 }

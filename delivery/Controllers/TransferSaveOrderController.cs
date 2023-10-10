@@ -1,5 +1,6 @@
 ﻿using Delivery.Hex.Drive;
 using Delivery.Hex.Drive.InputRequest;
+using DeliveryServer.Controllers.Extension;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DeliveryServer.Controllers
@@ -22,18 +23,18 @@ namespace DeliveryServer.Controllers
         /// <remarks>Назначить заявке курьера
         /// </remarks>
         /// <response code="200"></response>
-        //[HttpGet]
         [HttpPost]
         [Route("/api/order/transfer_save/{id}")]
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public void Get(int id, string courier)
+        public async Task<ActionResult> TransferOrderSave(int id, string courier)
         {
-            _ = _Handler.HandleInput(new TransferSaveOrderInputRequest()
+            var result = await  _Handler.HandleInput(new TransferSaveOrderInputRequest()
             {
                 Id = id,
                 CourierName = courier,
             });
+            return ControllerBaseExtender.ReturnActionResultInputHandlerResponse<bool>(this, result);
         }
     }
 }
