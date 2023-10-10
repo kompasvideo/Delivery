@@ -147,8 +147,14 @@ namespace DeliveryClient.Infrastructure
         /// <returns></returns>
         public async Task TransferOrderSave(int id, string courier)
         {
-            string url = host + "/api/order/transfer_save/" + id +"?courier=" + courier;
-            _ = httpClient.GetStringAsync(url).Result;
+            //string url = host + "/api/order/transfer_save/" + id +"?courier=" + courier;
+            //_ = httpClient.GetStringAsync(url).Result;
+
+            HttpRequestMessage request = new HttpRequestMessage();
+            string url = host + "/api/order/transfer_save/" + id + "?courier=" + courier;
+            request.RequestUri = new Uri(url);
+            request.Method = HttpMethod.Post;
+            await httpClient.SendAsync(request);
         }
 
         /// <summary>

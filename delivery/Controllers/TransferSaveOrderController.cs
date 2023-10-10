@@ -22,7 +22,8 @@ namespace DeliveryServer.Controllers
         /// <remarks>Назначить заявке курьера
         /// </remarks>
         /// <response code="200"></response>
-        [HttpGet]
+        //[HttpGet]
+        [HttpPost]
         [Route("/api/order/transfer_save/{id}")]
         [Produces("application/json")]
         [ProducesResponseType(StatusCodes.Status200OK)]

@@ -40,7 +40,7 @@ namespace Delivery.Data.EF.Entity.DeliveryOrder
         /// связь с таблицей курьеров
         /// </summary>
         [MaybeNull]
-        public int? CourierInfoKey { get; set; }
+        public int CourierInfoKey { get; set; }
         [MaybeNull]
         [ForeignKey("CourierInfoKey")]
         public Courier Courier { get; set; }
