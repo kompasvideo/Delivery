@@ -2,6 +2,9 @@
 
 namespace Delivery.Hex.Drive.InputRequest
 {
+    /// <summary>
+    /// Класс для вызова класса-сервиса для получения всех клиентов (грузополучателей, грузоотправителей)
+    /// </summary>
     public class GetAllClientsInputHandler : InputHandler<GetAllClientsInputRequest, IEnumerable<object>>
     {
         private readonly IGetAllClientsInputService _Service;

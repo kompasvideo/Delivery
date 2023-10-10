@@ -34,6 +34,10 @@ namespace DeliveryServer.Startup
             services.AddTransient<InputHandler<EditOrderInputRequest, bool>, EditOrderInputHandler>();
             services.AddTransient<InputHandler<DeleteOrderInputRequest, bool>, DeleteOrderInputHandler>();
             services.AddTransient<InputHandler<GetAllClientsInputRequest, IEnumerable<object>>, GetAllClientsInputHandler>();
+            services.AddTransient<InputHandler<GetAllCouriersInputRequest, IEnumerable<object>>, GetAllCouriersInputHandler>();
+            services.AddTransient<InputHandler<TransferSaveOrderInputRequest, bool>, TransferSaveOrderInputHandler>();
+            services.AddTransient<InputHandler<OrderDoneInputRequest, bool>, OrderDoneInputHandler>();
+            services.AddTransient<InputHandler<OrderCanceledSaveInputRequest, bool>, OrderCanceledSaveInputHandler>();
 
             services.AddTransient<IAddOrderInputService, AddOrderInputService>();
             services.AddTransient<IGetAllOrderInputService, GetAllOrderInputService>();
@@ -42,6 +46,10 @@ namespace DeliveryServer.Startup
             services.AddTransient<IEditOrderInputService, EditOrderInputService>();
             services.AddTransient<IDeleteOrderInputService, DeleteOrderInputService>();
             services.AddTransient<IGetAllClientsInputService, GetAllClientsInputService>();
+            services.AddTransient<IGetAllCouriersInputService, GetAllCouriersInputService>();
+            services.AddTransient<ITransferSaveOrderInputService, TransferSaveOrderInputService>();
+            services.AddTransient<IOrderDoneInputService, OrderDoneInputService>();
+            services.AddTransient<IOrderCanceledSaveInputService, OrderCanceledSaveInputService>();
 
             services.AddTransient<ICommandHandler<AddOrderCommand, bool>, AddOrderCommandHandler>();
             services.AddTransient<ICommandHandler<DeleteOrderCommand, bool>, DeleteOrderCommandHandler>();
@@ -50,6 +58,10 @@ namespace DeliveryServer.Startup
             services.AddTransient<IQueryHandler<GetOrderQuery, GetOrderQueryModel>, GetOrderQueryHandler>();
             services.AddTransient<IQueryHandler<SearchOrderQuery, SearchOrderQueryModel>, SearchOrderQueryHandler>();
             services.AddTransient<IQueryHandler<GetAllClientsQuery, GetAllClientsQueryModel>, GetAllClientsQueryHandler>();
+            services.AddTransient<IQueryHandler<GetAllCouriersQuery, GetAllCouriersQueryModel>, GetAllCouriersQueryHandler>();
+            services.AddTransient<ICommandHandler<TransferSaveOrderCommand, bool>, TransferSaveOrderCommandHandler>();
+            services.AddTransient<ICommandHandler<OrderDoneCommand, bool>, OrderDoneCommandHandler>();
+            services.AddTransient<ICommandHandler<OrderCanceledSaveCommand, bool>, OrderCanceledSaveCommandHandler>();
             return services;
         }
 

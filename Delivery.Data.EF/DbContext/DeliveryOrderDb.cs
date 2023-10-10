@@ -3,6 +3,10 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Delivery.Data.EF;
 
+/// <summary>
+/// Контекст для БД DeliveryOrder
+/// описывает все таблицы в БД и связи между ними
+/// </summary>
 public class DeliveryOrderDb : DbContext
 {
     public DbSet<Client> Clients { get; set; }

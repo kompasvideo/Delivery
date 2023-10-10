@@ -27,5 +27,9 @@ namespace DeliveryClient.Models
         public StatusOrder StatusOrder { get; set; }
         public int? CourierInfoKey { get; set; }
         public Courier Courier { get; set; }
+        /// <summary>
+        /// Комментарий к отмене заявке
+        /// </summary>
+        public string? Comments { get; set; }
     }
 }

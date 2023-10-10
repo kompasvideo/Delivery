@@ -1,5 +1,8 @@
 ﻿namespace Delivery.Hex.Domain.Command
 {
+    /// <summary>
+    /// Данные для класса-команды для регистрации новой заявки 
+    /// </summary>
     public class AddOrderCommand : ICommand<bool>
     {
         public int OrderId { get; set; }
@@ -24,5 +27,9 @@
         public int StatusOrder { get; set; }
         public int CourierInfoKey { get; set; }
         public string? Courier { get; set; }
+        /// <summary>
+        /// Комментарий к отмене заявке
+        /// </summary>
+        public string? Comments { get; set; }
     }
 }

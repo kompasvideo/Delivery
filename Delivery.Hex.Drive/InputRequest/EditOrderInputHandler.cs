@@ -2,6 +2,9 @@
 
 namespace Delivery.Hex.Drive.InputRequest
 {
+    /// <summary>
+    /// Класс для вызова класса-сервиса редактирования заявки
+    /// </summary>
     public class EditOrderInputHandler : InputHandler<EditOrderInputRequest, bool>
 	{
         private readonly IEditOrderInputService _Service;

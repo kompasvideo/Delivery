@@ -4,7 +4,7 @@ using System.Text;
 using Newtonsoft.Json;
 using DeliveryClient.Mappers;
 
-namespace DeliveryClient.Data
+namespace DeliveryClient.Infrastructure
 {
     public class OrderAPI : IOrder
     {
@@ -12,6 +12,7 @@ namespace DeliveryClient.Data
         private HttpClient httpClient { get; set; }
         public IEnumerable<Order> Orders { get; set; }
         public IEnumerable<Client> Clients { get; set; }
+        public IEnumerable<Courier> Couriers { get; set; }
         private readonly IOrderMapper _OrderMapper;
 
         public OrderAPI(IOrderMapper orderMapper)
@@ -31,7 +32,7 @@ namespace DeliveryClient.Data
         public void DeleteOrder(int id)
         {            
             string url = host + "/api/order/delete/" + id;
-            _ = httpClient.GetStringAsync(url).Result;
+            _ = httpClient.DeleteAsync(url).Result;
         }
 
         public async Task EditOrder(Order order)
@@ -85,5 +86,32 @@ namespace DeliveryClient.Data
             Clients = JsonConvert.DeserializeObject<IEnumerable<Client>>(json);
             return Clients.FirstOrDefault(o => o.Name == name);
         }
+
+        public IEnumerable<Courier> GetCouriers()
+        {
+            string url = host + "/api/order/get_all_couriers";
+            string json = httpClient.GetStringAsync(url).Result;
+            Couriers = JsonConvert.DeserializeObject<IEnumerable<Courier>>(json);
+            return Couriers;
+        }
+
+        public async Task TransferOrderSave(int id, string courier)
+        {
+            string url = host + "/api/order/transfer_save/" + id +"?courier=" + courier;
+            _ = httpClient.GetStringAsync(url).Result;
+        }
+
+        public async Task OrderDone(int id)
+        {
+            string url = host + "/api/order/order_done/" + id;
+            _ = httpClient.GetStringAsync(url).Result;
+        }
+
+        public async Task OrderCanceledSave(int id, string comments)
+        {
+            string url = host + "/api/order/order_canceled_save/" + id + "?comments=" + comments;
+            _ = httpClient.GetStringAsync(url).Result;
+        }
+
     }
 }

@@ -16,6 +16,7 @@ namespace DeliveryClient.Mappers
                 Cargo = order.Cargo,
                 StatusOrder = (int)order.StatusOrder,
                 CourierInfoKey = order?.CourierInfoKey ?? 0,
+                Comments = order.Comments,
             };
             if (order.Shipper != null)
             {

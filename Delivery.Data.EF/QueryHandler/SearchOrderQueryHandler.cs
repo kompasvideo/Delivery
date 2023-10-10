@@ -4,6 +4,10 @@ using Delivery.Hex.Domain.Query;
 
 namespace Delivery.Data.EF.QueryHandler
 {
+    /// <summary>
+    /// класс-запрос поиск текста в полях заявки
+    /// выполняет непосредственно запрос к БД через EF
+    /// </summary>
     public class SearchOrderQueryHandler : IQueryHandler<SearchOrderQuery, SearchOrderQueryModel>
     {
         private readonly DeliveryOrderDb _Context;

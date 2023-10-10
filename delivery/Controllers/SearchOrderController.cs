@@ -22,8 +22,7 @@ namespace DeliveryServer.Controllers
             { 
                 Text = text
             });
-            string str = JsonConvert.SerializeObject(result.Result.Response);
-            return str;
+            return JsonConvert.SerializeObject(result.Result.Response);
         }
     }
 }

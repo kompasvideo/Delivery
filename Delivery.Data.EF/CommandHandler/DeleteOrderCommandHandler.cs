@@ -3,6 +3,9 @@ using Delivery.Hex.Domain.Command;
 
 namespace Delivery.Data.EF.CommandHandler
 {
+    /// <summary>
+    /// Класс-команда для удаления заявки - выполняет непосредственно запрос к БД через EF
+    /// </summary>
     public class DeleteOrderCommandHandler : ICommandHandler<DeleteOrderCommand, bool>
     {
         private readonly DeliveryOrderDb context;

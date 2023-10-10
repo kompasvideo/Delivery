@@ -2,6 +2,9 @@
 
 namespace Delivery.Hex.Drive.InputRequest
 {
+    /// <summary>
+    /// Класс для вызова класса-сервиса удаления заявки
+    /// </summary>
     public class DeleteOrderInputHandler : InputHandler<DeleteOrderInputRequest, bool>
 	{
         private readonly IDeleteOrderInputService _Service;

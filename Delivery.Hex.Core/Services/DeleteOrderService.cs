@@ -3,6 +3,10 @@ using Delivery.Hex.Domain.Entity;
 using Delivery.Hex.Domain.Services;
 
 namespace Delivery.Hex.Core;
+
+/// <summary>
+/// класс-сервис вызывает непосредственно класс-команду для удаления заявки
+/// </summary>
 public class DeleteOrderInputService : IDeleteOrderInputService
 {
     private readonly ICommandHandler<DeleteOrderCommand, bool> _Handler;

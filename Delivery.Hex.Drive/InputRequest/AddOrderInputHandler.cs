@@ -2,6 +2,9 @@
 
 namespace Delivery.Hex.Drive.InputRequest
 {
+    /// <summary>
+    /// Класс для вызова класса-сервиса регистрации новой заявки
+    /// </summary>
     public class AddOrderInputHandler : InputHandler<AddOrderInputRequest, bool>
 	{
         private readonly IAddOrderInputService _Service;

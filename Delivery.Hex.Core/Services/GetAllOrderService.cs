@@ -4,6 +4,9 @@ using Delivery.Hex.Domain.Query;
 using Delivery.Hex.Domain.Services;
 
 namespace Delivery.Hex.Core;
+/// <summary>
+/// класс-сервис вызывает непосредственно класс-запрос для получения всех заявок
+/// </summary>
 public class GetAllOrderInputService : IGetAllOrderInputService
 {
     private readonly IQueryHandler<GetAllQuery, GetAllQueryModel?> _Query;

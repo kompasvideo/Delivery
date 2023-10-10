@@ -13,5 +13,9 @@ namespace DeliveryClient.Interfaces
         Task EditOrder(Order order);
         IEnumerable<Client> GetClients();
         Client GetClientToName(string name);
+        IEnumerable<Courier> GetCouriers();
+        Task TransferOrderSave(int id, string courier);
+        Task OrderDone(int id);
+        Task OrderCanceledSave(int id, string comments);
     }
 }

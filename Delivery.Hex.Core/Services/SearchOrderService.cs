@@ -4,6 +4,9 @@ using Delivery.Hex.Domain.Query;
 using Delivery.Hex.Domain.Services;
 
 namespace Delivery.Hex.Core;
+/// <summary>
+/// класс-сервис вызывает непосредственно класс-запрос для поиска текста в полях заявки
+/// </summary>
 public class SearchOrderInputService : ISearchOrderInputService
 {
     private readonly IQueryHandler<SearchOrderQuery, SearchOrderQueryModel?> _Query;

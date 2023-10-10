@@ -4,6 +4,9 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace Delivery.Data.EF.Entity.DeliveryOrder
 {
+    /// <summary>
+    /// класс описывает таблицу заявак
+    /// </summary>
     public class Order
     {
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -25,15 +28,26 @@ namespace Delivery.Data.EF.Entity.DeliveryOrder
         [ForeignKey("ConsigneeInfoKey")]
         public Client Consignee { get; set; }
         /// <summary>
-        /// груз
+        /// название груза
         /// </summary>
         public string? Cargo { get; set; }
+        /// <summary>
+        /// статус заявки
+        /// </summary>
         public StatusOrder StatusOrder { get; set; }
+
+        /// <summary>
+        /// связь с таблицей курьеров
+        /// </summary>
         [MaybeNull]
         public int? CourierInfoKey { get; set; }
         [MaybeNull]
         [ForeignKey("CourierInfoKey")]
         public Courier Courier { get; set; }
+        /// <summary>
+        /// Комментарий к отмене заявке
+        /// </summary>
+        public string? Comments { get; set; }
     }
 }
 

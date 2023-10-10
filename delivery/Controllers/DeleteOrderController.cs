@@ -15,7 +15,7 @@ public class DeleteOrderController : ControllerBase
         _Handler = handler;
     }
 
-    [HttpGet]
+    [HttpDelete]
     [Route("/api/order/delete/{id}")]
     public async Task<ActionResult> Delete(int id)
     {

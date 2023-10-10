@@ -4,6 +4,10 @@ using Delivery.Hex.Domain.Query;
 
 namespace Delivery.Data.EF.QueryHandler
 {
+    /// <summary>
+    /// класс-запрос получения заявки по Id
+    /// выполняет непосредственно запрос к БД через EF
+    /// </summary>
     public class GetOrderQueryHandler : IQueryHandler<GetOrderQuery, GetOrderQueryModel>
     {
         private readonly DeliveryOrderDb _Context;

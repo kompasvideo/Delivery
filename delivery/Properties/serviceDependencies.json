@@ -1,12 +1,3 @@
 {
-  "dependencies": {
-    "secrets1": {
-      "type": "secrets"
-    },
-    "mssql1": {
-      "type": "mssql",
-      "connectionId": "Data:DeliveryOrder:ConnectionString",
-      "dynamicId": null
-    }
-  }
+  "dependencies": {}
 }

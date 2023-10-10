@@ -3,6 +3,9 @@ using Delivery.Hex.Domain.Entity;
 using Delivery.Hex.Domain.Services;
 
 namespace Delivery.Hex.Core;
+/// <summary>
+/// класс-сервис вызывает непосредственно класс-команду для регистрации новой заявки
+/// </summary>
 public class AddOrderInputService : IAddOrderInputService
 {
     private readonly ICommandHandler<AddOrderCommand, bool> _Handler;

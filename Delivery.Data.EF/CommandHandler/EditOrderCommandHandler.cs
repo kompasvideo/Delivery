@@ -3,6 +3,9 @@ using Delivery.Hex.Domain.Command;
 
 namespace Delivery.Data.EF.CommandHandler
 {
+    /// <summary>
+    /// Класс-команда для редактирования заявки - выполняет непосредственно запрос к БД через EF
+    /// </summary>
     public class EditOrderCommandHandler : ICommandHandler<EditOrderCommand, bool>
     {
         private readonly DeliveryOrderDb context;

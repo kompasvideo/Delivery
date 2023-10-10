@@ -38,14 +38,22 @@
                     {
                         <div>Новая</div>
                     }
+                    else if (p.StatusOrder == StatusOrder.TRANSMITTED)
+                    {
+                        <div>Передано на выполнение</div>
+                    }
+                    else if (p.StatusOrder == StatusOrder.DONE)
+                    {
+                        <div>Выполнено</div>
+                    }
                     else
                     {
-                        <div>В работе</div>
+                        <div>Отменена</div>
                     }
                 </div>
                 <div class="col-md-2">
                     <form id="@p.OrderId" asp-action="DeleteOrder"
-                      asp-controller="Order" method="post" class="d-inline-flex pull-right" style="float:right">
+                          asp-controller="Order" method="post" class="d-inline-flex pull-right" style="float:right">
                         <input type="hidden" name="id"
                                value="@p.OrderId" />
                         <button type="submit"

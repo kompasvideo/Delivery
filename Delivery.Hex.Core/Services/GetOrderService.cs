@@ -4,6 +4,9 @@ using Delivery.Hex.Domain.Query;
 using Delivery.Hex.Domain.Services;
 
 namespace Delivery.Hex.Core;
+/// <summary>
+/// класс-сервис вызывает непосредственно класс-запрос для получения заявки по id
+/// </summary>
 public class GetOrderInputService : IGetOrderInputService
 {
     private readonly IQueryHandler<GetOrderQuery, GetOrderQueryModel?> _Query;

@@ -24,5 +24,9 @@
         public int StatusOrder { get; set; }
         public int CourierInfoKey { get; set; }
         public string? Courier { get; set; }
+        /// <summary>
+        /// Комментарий к отмене заявке
+        /// </summary>
+        public string? Comments { get; set; }
     }
 }
