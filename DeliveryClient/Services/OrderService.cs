@@ -32,7 +32,8 @@ namespace DeliveryClient.Infrastructure
         {
             string url = host + "/api/order/get_all";
             string json = httpClient.GetStringAsync(url).Result;
-            Orders = JsonConvert.DeserializeObject<IEnumerable<Order>>(json);
+            string str = JsonConvert.DeserializeObject<string>(json);
+            Orders = JsonConvert.DeserializeObject<IEnumerable<Order>>(str);
             return Orders;
         }
 
@@ -70,7 +71,8 @@ namespace DeliveryClient.Infrastructure
         {
             string url = host + "/api/order/get/" + id;
             string json = httpClient.GetStringAsync(url).Result;
-            Order order = JsonConvert.DeserializeObject<Order>(json);
+            string str = JsonConvert.DeserializeObject<string>(json);
+            Order order = JsonConvert.DeserializeObject<Order>(str);
             return order;
         }
 
@@ -98,7 +100,8 @@ namespace DeliveryClient.Infrastructure
         {
             string url = host + "/api/order/search?text=" + text;
             string json = httpClient.GetStringAsync(url).Result;
-            Orders = JsonConvert.DeserializeObject<IEnumerable<Order>>(json);
+            string str = JsonConvert.DeserializeObject<string>(json);
+            Orders = JsonConvert.DeserializeObject<IEnumerable<Order>>(str);
             return Orders;
         }
 
