@@ -150,8 +150,11 @@ namespace DeliveryClient.Infrastructure
         /// <returns></returns>
         public async Task TransferOrderSave(int id, string courier)
         {
-            string url = host + "/api/order/transfer_save/" + id +"?courier=" + courier;
-            _ = httpClient.GetStringAsync(url).Result;
+            HttpRequestMessage request = new HttpRequestMessage();
+            string url = host + "/api/order/transfer_save/" + id + "?courier=" + courier;
+            request.RequestUri = new Uri(url);
+            request.Method = HttpMethod.Post;
+            await httpClient.SendAsync(request);
         }
 
         /// <summary>
@@ -161,8 +164,11 @@ namespace DeliveryClient.Infrastructure
         /// <returns></returns>
         public async Task OrderDone(int id)
         {
+            HttpRequestMessage request = new HttpRequestMessage();
             string url = host + "/api/order/order_done/" + id;
-            _ = httpClient.GetStringAsync(url).Result;
+            request.RequestUri = new Uri(url);
+            request.Method = HttpMethod.Post;
+            await httpClient.SendAsync(request);
         }
 
         /// <summary>
@@ -172,8 +178,11 @@ namespace DeliveryClient.Infrastructure
         /// <returns></returns>
         public async Task OrderCanceledSave(int id, string comments)
         {
+            HttpRequestMessage request = new HttpRequestMessage();
             string url = host + "/api/order/order_canceled_save/" + id + "?comments=" + comments;
-            _ = httpClient.GetStringAsync(url).Result;
+            request.RequestUri = new Uri(url);
+            request.Method = HttpMethod.Post;
+            await httpClient.SendAsync(request);
         }
     }
 }
