@@ -5,6 +5,9 @@ using Newtonsoft.Json;
 
 namespace DeliveryServer.Controllers
 {
+    /// <summary>
+    /// Класс-контролёр для поиска текста по заявкам 
+    /// </summary>
     [ApiController]
     public class SearchOrderController : ControllerBase
     {
@@ -14,8 +17,17 @@ namespace DeliveryServer.Controllers
             _Handler = handler;
         }
 
+        /// <summary>
+        /// Искать текст во всех заявках
+        /// </summary>
+        /// <returns>список заявок</returns>
+        /// <remarks>Искать текст во всех заявках
+        /// </remarks>
+        /// <response code="200">список заявок</response>
         [HttpGet]
         [Route("/api/order/search")]
+        [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public string Search(string text)
         {
             var result = _Handler.HandleInput(new SearchOrderInputRequest() 

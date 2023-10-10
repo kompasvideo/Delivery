@@ -5,6 +5,9 @@ using Newtonsoft.Json;
 
 namespace DeliveryServer.Controllers
 {
+    /// <summary>
+    /// Класс-контролёр для изменения статуса заявки как "Выполнено" 
+    /// </summary>
     [ApiController]
     public class OrderDoneController : ControllerBase
     {
@@ -14,8 +17,16 @@ namespace DeliveryServer.Controllers
             _Handler = handler;
         }
 
+        /// <summary>
+        /// Изменить статус заявки на "Выполнено" 
+        /// </summary>
+        /// <remarks>Изменить статус заявки на "Выполнено" 
+        /// </remarks>
+        /// <response code="200"></response>
         [HttpGet]
         [Route("/api/order/order_done/{id}")]
+        [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public void Get(int id)
         {
             _ = _Handler.HandleInput(new OrderDoneInputRequest()

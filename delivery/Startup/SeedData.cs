@@ -1,9 +1,11 @@
 ﻿using Delivery.Data.EF;
 using Delivery.Data.EF.Entity.DeliveryOrder;
-using Microsoft.EntityFrameworkCore;
 
 namespace DeliveryServer.Models
 {
+    /// <summary>
+    /// Установка начальных значений в БД
+    /// </summary>
     public class SeedData
     {
         public static void EnsurePopulated(IApplicationBuilder app)

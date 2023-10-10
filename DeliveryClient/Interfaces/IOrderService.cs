@@ -2,7 +2,10 @@
 
 namespace DeliveryClient.Interfaces
 {
-    public interface IOrder
+    /// <summary>
+    /// Интерфейс для класса-сервиса
+    /// </summary>
+    public interface IOrderService
     {
         IEnumerable<Order> Orders { get; set; }
         IEnumerable<Order> GetAll();

@@ -5,6 +5,9 @@ using Newtonsoft.Json;
 
 namespace DeliveryServer.Controllers
 {
+    /// <summary>
+    /// Класс-контролёр для получения всех заявок
+    /// </summary>
     [ApiController]
     public class GetAllOrderController : ControllerBase
     {
@@ -14,8 +17,17 @@ namespace DeliveryServer.Controllers
             _Handler = handler;
         }
 
+        /// <summary>
+        /// Получить все заказы
+        /// </summary>
+        /// <returns>все заказы</returns>
+        /// <remarks>Получить все заказы 
+        /// </remarks>
+        /// <response code="200">все заказы</response>
         [HttpGet]
         [Route("/api/order/get_all")]
+        [Produces("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public string GetAll()
         {
             var result = _Handler.HandleInput(new GetAllOrderInputRequest());

@@ -7,23 +7,39 @@ namespace DeliveryClient.Controllers
 {
     public class OrderController : Controller
     {
-        private readonly IOrder _orderRepository;
+        private readonly IOrderService _orderRepository;
 
-        public OrderController(IOrder order)
+        public OrderController(IOrderService order)
         {
             _orderRepository = order;
         }
 
+        /// <summary>
+        /// вывод страницы Index
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Index()
         {
             return View();
         }
 
+        /// <summary>
+        /// вывод страницы Add - зарегистрировать заявку
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Add()
         {
             return View(_orderRepository.GetClients());
         }
 
+        /// <summary>
+        /// обработать зарегистрированную заявку и перейти на страницу Index
+        /// </summary>
+        /// <param name="date">дата заявки</param>
+        /// <param name="shipper">грузоотправитель</param>
+        /// <param name="consignee">грузополучатель</param>
+        /// <param name="cargo">груз</param>
+        /// <returns></returns>
         [HttpPost]
         public RedirectToActionResult AddOrder(string date, string shipper, string consignee, string cargo)
         {
@@ -36,18 +52,30 @@ namespace DeliveryClient.Controllers
             return RedirectToAction("Index");
         }
 
+        /// <summary>
+        /// показть все заявки на странице
+        /// </summary>
+        /// <returns></returns>
         public IActionResult ViewAll()
         {
             _orderRepository.GetAll();
             return View(_orderRepository.Orders);
         }
 
+        /// <summary>
+        /// вывести окно поиска заявок
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Search()
         {
             return View();
         }
 
-
+        /// <summary>
+        /// вывести окно результата поиска заявок
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult SearchOrder(string text)
         {
@@ -56,12 +84,21 @@ namespace DeliveryClient.Controllers
             return View(orders);
         }
 
+        /// <summary>
+        /// вывести окно для передачи завки курьеру 
+        /// </summary>
+        /// <returns></returns>
         public IActionResult Transfer()
         {
             _orderRepository.GetAll();
             return View(_orderRepository.Orders);
         }
 
+        /// <summary>
+        /// вывести окно выбора курьера для заявки
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult TransferOrder(int id)
         {
@@ -73,6 +110,12 @@ namespace DeliveryClient.Controllers
             return View(viewTransfer);
         }
 
+        /// <summary>
+        /// обработать назначения курьера на заявку и перейти на страницу поиска
+        /// </summary>
+        /// <param name="id">id заявки</param>
+        /// <param name="courier">Имя курьера</param>
+        /// <returns></returns>
         [HttpPost]
         public RedirectToActionResult TransferOrderSave(int id, string courier)
         {
@@ -81,11 +124,21 @@ namespace DeliveryClient.Controllers
             return RedirectToAction("Transfer");
         }
 
+        /// <summary>
+        /// страница редактирования заявок
+        /// </summary>
+        /// <returns></returns>
         public IActionResult EditOrder()
         {
             _orderRepository.GetAll();
             return View(_orderRepository.Orders);
         }
+
+        /// <summary>
+        /// страница редактирования конкретной заявки по id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult ViewEditOrder(int id)
         {
@@ -97,6 +150,15 @@ namespace DeliveryClient.Controllers
             return View(viewEdit);
         }
 
+        /// <summary>
+        /// сохранения редактированной заявки и переход на страницу редактирования заявок
+        /// </summary>
+        /// <param name="id">id заявки</param>
+        /// <param name="date">дата заявки</param>
+        /// <param name="shipper">грузоотправитель</param>
+        /// <param name="consignee">грузополучатель</param>
+        /// <param name="cargo">груз</param>
+        /// <returns></returns>
         [HttpPost]
         public RedirectToActionResult EditOrderSave(int id, string date, string shipper, string consignee, string cargo)
         {
@@ -113,12 +175,21 @@ namespace DeliveryClient.Controllers
             return RedirectToAction("EditOrder");
         }
 
+        /// <summary>
+        /// показ заявок для удаления
+        /// </summary>
+        /// <returns></returns>
         public IActionResult DeleteOrder()
         {
             _orderRepository.GetAll();
             return View(_orderRepository.Orders);
         }
 
+        /// <summary>
+        /// удаление заявки по id
+        /// </summary>
+        /// <param name="id">id заявки</param>
+        /// <returns></returns>
         [HttpPost]
         public RedirectToActionResult DeleteOrder(int id)
         {
@@ -127,6 +198,11 @@ namespace DeliveryClient.Controllers
             return RedirectToAction("DeleteOrder");
         }
 
+        /// <summary>
+        /// изменение статуса заявки на "выполнено"
+        /// </summary>
+        /// <param name="id">id заявки</param>
+        /// <returns></returns>
         [HttpPost]
         public RedirectToActionResult OrderDone(int id)
         {
@@ -134,7 +210,11 @@ namespace DeliveryClient.Controllers
             return RedirectToAction("EditOrder");
         }
 
-
+        /// <summary>
+        /// страница ввода причины отмены заявки
+        /// </summary>
+        /// <param name="id">id заявки</param>
+        /// <returns></returns>
         [HttpPost]
         public IActionResult OrderCanceled(int id)
         {
@@ -142,6 +222,12 @@ namespace DeliveryClient.Controllers
             return View(order);
         }
 
+        /// <summary>
+        /// изменение статуса заявки на "отменено"
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="comments"></param>
+        /// <returns></returns>
         [HttpPost]
         public RedirectToActionResult OrderCanceledSave(int id, string comments)
         {

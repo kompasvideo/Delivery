@@ -6,7 +6,10 @@ using DeliveryClient.Mappers;
 
 namespace DeliveryClient.Infrastructure
 {
-    public class OrderAPI : IOrder
+    /// <summary>
+    /// Класс-сервис для передачи сообщений серверу
+    /// </summary>
+    public class OrderService : IOrderService
     {
         private const string host = "http://localhost:5001";
         private HttpClient httpClient { get; set; }
@@ -15,12 +18,16 @@ namespace DeliveryClient.Infrastructure
         public IEnumerable<Courier> Couriers { get; set; }
         private readonly IOrderMapper _OrderMapper;
 
-        public OrderAPI(IOrderMapper orderMapper)
+        public OrderService(IOrderMapper orderMapper)
         {
             httpClient = new HttpClient();
             _OrderMapper = orderMapper;
         }
 
+        /// <summary>
+        /// получить все заявки
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Order> GetAll()
         {
             string url = host + "/api/order/get_all";
@@ -29,12 +36,21 @@ namespace DeliveryClient.Infrastructure
             return Orders;
         }
 
+        /// <summary>
+        /// удалить заявку по id
+        /// </summary>
+        /// <param name="id"></param>
         public void DeleteOrder(int id)
         {            
             string url = host + "/api/order/delete/" + id;
             _ = httpClient.DeleteAsync(url).Result;
         }
 
+        /// <summary>
+        /// сохранить изменённую заявку
+        /// </summary>
+        /// <param name="order">заявка</param>
+        /// <returns></returns>
         public async Task EditOrder(Order order)
         {
             HttpRequestMessage request = new HttpRequestMessage();
@@ -45,6 +61,11 @@ namespace DeliveryClient.Infrastructure
             await httpClient.SendAsync(request);
         }
 
+        /// <summary>
+        /// получить заявку по id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Order GetOrderById(int id)
         {
             string url = host + "/api/order/get/" + id;
@@ -53,6 +74,11 @@ namespace DeliveryClient.Infrastructure
             return order;
         }
 
+        /// <summary>
+        /// зарегистрировать новую заявку
+        /// </summary>
+        /// <param name="order"></param>
+        /// <returns></returns>
         public async Task SaveOrder(Order order)
         {
             HttpRequestMessage request = new HttpRequestMessage();
@@ -63,6 +89,11 @@ namespace DeliveryClient.Infrastructure
             await httpClient.SendAsync(request);
         }
 
+        /// <summary>
+        /// поиск текста в заявках
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         public IEnumerable<Order> SearchOrder(string text)
         {
             string url = host + "/api/order/search?text=" + text;
@@ -71,6 +102,10 @@ namespace DeliveryClient.Infrastructure
             return Orders;
         }
 
+        /// <summary>
+        /// получить все клиенты (грузополучатели, грузоотправители)
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Client> GetClients()
         {
             string url = host + "/api/order/get_all_clients";
@@ -79,6 +114,11 @@ namespace DeliveryClient.Infrastructure
             return Clients;
         }
 
+        /// <summary>
+        /// получить клиента по имени
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
         public Client GetClientToName(string name)
         {
             string url = host + "/api/order/get_all_clients";
@@ -87,6 +127,10 @@ namespace DeliveryClient.Infrastructure
             return Clients.FirstOrDefault(o => o.Name == name);
         }
 
+        /// <summary>
+        /// получить всех курьеров
+        /// </summary>
+        /// <returns></returns>
         public IEnumerable<Courier> GetCouriers()
         {
             string url = host + "/api/order/get_all_couriers";
@@ -95,23 +139,38 @@ namespace DeliveryClient.Infrastructure
             return Couriers;
         }
 
+        /// <summary>
+        /// назначить курьера для заявки
+        /// </summary>
+        /// <param name="id">id заявки</param>
+        /// <param name="courier">имя курьера</param>
+        /// <returns></returns>
         public async Task TransferOrderSave(int id, string courier)
         {
             string url = host + "/api/order/transfer_save/" + id +"?courier=" + courier;
             _ = httpClient.GetStringAsync(url).Result;
         }
 
+        /// <summary>
+        /// перевести статус заявки на "выполнено"
+        /// </summary>
+        /// <param name="id">id заявки</param>
+        /// <returns></returns>
         public async Task OrderDone(int id)
         {
             string url = host + "/api/order/order_done/" + id;
             _ = httpClient.GetStringAsync(url).Result;
         }
 
+        /// <summary>
+        /// перевести статус заявки на "отменено"
+        /// </summary>
+        /// <param name="id">id заявки</param>
+        /// <returns></returns>
         public async Task OrderCanceledSave(int id, string comments)
         {
             string url = host + "/api/order/order_canceled_save/" + id + "?comments=" + comments;
             _ = httpClient.GetStringAsync(url).Result;
         }
-
     }
 }

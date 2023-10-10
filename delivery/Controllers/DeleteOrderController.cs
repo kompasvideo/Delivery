@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DeliveryServer.Controllers;
 
+/// <summary>
+/// Класс-контролёр удалить заявку по Id
+/// </summary>
 [ApiController]
 public class DeleteOrderController : ControllerBase
 {
@@ -15,8 +18,18 @@ public class DeleteOrderController : ControllerBase
         _Handler = handler;
     }
 
+    /// <summary>
+    /// Удалить заявку по Id
+    /// </summary>
+    /// <param name="id">id заявки</param>
+    /// <returns>результат удаления заявки</returns>
+    /// <remarks>Удалить заявку по Id
+    /// </remarks>
+    /// <response code="200">результат удаления заявки - Ок</response>
     [HttpDelete]
     [Route("/api/order/delete/{id}")]
+    [Produces("application/json")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     public async Task<ActionResult> Delete(int id)
     {
         var result = await _Handler.HandleInput(new DeleteOrderInputRequest()

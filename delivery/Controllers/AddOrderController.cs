@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DeliveryServer.Controllers;
 
+/// <summary>
+/// Класс-контролёр зарегистрировать новую заявку
+/// </summary>
 [ApiController]
 public class AddOrderController : ControllerBase
 {
@@ -15,9 +18,19 @@ public class AddOrderController : ControllerBase
         _Handler = handler;
     }
 
+    /// <summary>
+    /// Зарегистрировать новую заявку
+    /// </summary>
+    /// <param name="order">данные для новой заявки</param>
+    /// <returns>результат регистрацииновой заявки</returns>
+    /// <remarks>Зарегистрировать новую заявку
+    /// </remarks>
+    /// <response code="200">результат регистрацииновой заявки - Ок</response>
     [HttpPost]
     [Route("/api/order/add")]
-    public async Task<ActionResult> Add(AddOrderInputRequest order)
+    [Produces("application/json")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    public async Task<ActionResult> AddOrder(AddOrderInputRequest order)
     {
         var result = await _Handler.HandleInput(order);
         return ControllerBaseExtender.ReturnActionResultInputHandlerResponse<bool>(this, result);

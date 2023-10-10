@@ -12,7 +12,7 @@ namespace DeliveryClient
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddTransient<IOrder, OrderAPI>();
+            builder.Services.AddTransient<IOrderService, OrderService>();
             builder.Services.AddTransient<IOrderMapper, OrderMapper>();
 
             var app = builder.Build();
